@@ -1,4 +1,4 @@
-# Random-Graphs-with-Prescribed-K-Core-Sequences
+# Read Me
 Code available for the methods described in Random Graphs with Prescribed K-Core Sequences:  A New Null Model for Network Analysis.
 
 The generator will take a list of core values and generate a graph that has nodes that correspond to those values. Note that not all core value combinations are viable.
