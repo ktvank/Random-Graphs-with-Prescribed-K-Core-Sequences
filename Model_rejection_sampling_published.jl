@@ -499,6 +499,9 @@ end
 #Overestimate the number of removable edges - see paper
 #Return a number greater than the number of possible remove moves
 function get_remove_edge(I::Vector{Int64}, J::Vector{Int64}, V::Vector{Int64}, G::SparseMatrixCSC{Int64,Int64}, cores::Vector{Int64}, k::Int64=cores[1])
+    cores = collect(findfirst(x -> x == k, cores):findlast(x -> x == k, cores))
+    G_sub = getindex(G::SparseMatrixCSC{Int64,Int64}, cores, cores)
+    I, J, V = findnz(G_sub)
     return length(V)
 end
 
